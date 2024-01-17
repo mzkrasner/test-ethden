@@ -140,9 +140,9 @@ export default function Attest() {
 
   return (
     <div className="flex h-screen w-screen flex-col">
-      <div className="m-auto w-1/2 h-1/2">
+      <div className="m-auto WhiteBox border-solid border-2 border-grey-800 text-center p-4 rounded">
         {address && (
-          <div className="right">
+          <div className="">
             <img alt="Network logo" className="logo" src={"/ethlogo.png"} />
 
             <p style={{ textAlign: "center" }}>
@@ -177,16 +177,15 @@ export default function Attest() {
             </form> */}
             {/* @ts-ignore */}
           </>
-          <button className="MetButton" onClick={createClaim}>
+          <button className="bg-gray-200 hover:bg-blue-700 text-black py-2 px-4 rounded" onClick={createClaim}>
             {attesting ? "Creating Claim..." : "Generate Badge"}
           </button>
 
           {address && (
             <>
-              <div className="SubText"> </div>
-              <div className="SubText">
+              <div className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
                 {" "}
-                <Link href="/connections">Connections</Link>
+                <Link  href="/connections">Connections</Link>
               </div>
             </>
           )}
