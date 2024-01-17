@@ -69,7 +69,7 @@ export default function Home() {
   return (
     <>
       <div className="flex h-screen w-screen flex-col">
-        <div className="m-auto w-1/2 h-1/2">
+        <div className="m-auto ">
           <div className="Container">
             {address && address.length && (
               <div className="right">

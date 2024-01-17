@@ -10,13 +10,13 @@ const Nav: React.FC = () => {
       <img src="https://flowbite.com/docs/images/logo.svg" className="h-8 mr-3" alt="" />
       <span className="self-center text-1xl font-semibold whitespace-nowrap dark:text-white">EthDenver24 Scavenger Hunt</span>
   </a>
-  <div className="flex md:order-2 self-end">
+  <div className="flex md:order-2">
+  <w3m-button balance='hide' />
   </div>
   <div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
     <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
     </ul>
   </div>
-  <w3m-button balance='hide' />
   </div>
 </nav>
 
