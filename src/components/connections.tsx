@@ -17,11 +17,19 @@ export default function Home() {
     setLoading(true);
     try {
       const badges: any = await compose.executeQuery<{
-        viewer: {
-          ethDen24AttendanceList: {
-            edges: {
-              node: ResolvedAttestation;
-            }[];
+        ethDen24AttendanceList: {
+          edges: {
+            node: {
+              id: string;
+              recipient: string;
+              controller: {
+                id: string;
+              };
+              latitude: number;
+              longitude: number;
+              timestamp: number;
+              jwt: string;
+            };
           };
         };
       }>(
@@ -30,6 +38,12 @@ export default function Home() {
           ethDen24AttendanceList(last: 2){
             edges{
               node{
+                ... on EthDen24DePin{
+                  id
+                }
+                ... on EthDen24RepCon{
+                  id
+                }
                 controller{
                   id
                 }

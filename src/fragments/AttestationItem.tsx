@@ -27,6 +27,7 @@ export function AttestationItem({ data }: any) {
     <div
       className="AttestContainer"
       style={{marginTop: "1rem", marginBottom: "1rem", padding: "1rem", borderRadius: "1rem", border: "1px solid #eaeaea"}}
+      onClick={() => window.open(`https://ceramic-temp.hirenodes.io/api/v0/streams/${data.id}`)}
     >
       <div className="IconHolder">
         {/* <Identicon
