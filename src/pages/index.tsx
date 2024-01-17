@@ -20,7 +20,7 @@ const Home: NextPage = () => {
     <>
       <Nav />
       <Head>
-        <title>Save Verifiable Credentials to Ceramic</title>
+        <title>EthDenver24 Scavenger Hunt</title>
         <meta name="description" content="" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

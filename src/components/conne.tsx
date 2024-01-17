@@ -90,7 +90,7 @@ export default function Home() {
             <div className="AttestationHolder">
               <div className="WhiteBox">
                 {loading && <div>Loading...</div>}
-                {!loading && !attestations.length && <div>Nothing here</div>}
+          
                 {attestations.length > 0 ? (
                   attestations.map((attestation, i) => (
                     <AttestationItem key={i} data={attestation} />
@@ -100,15 +100,10 @@ export default function Home() {
                 )}
                 <QRCodeSVG
                   style={{ margin: "auto" }}
-                  value={`http://localhost:3000/connections?address=${address}`}
+                  value={`https://main--rad-daifuku-f4c924.netlify.app/?event=kjzl6hvfrbw6c59nb0ycy2n47zp5swmcmuenf8wdaompnp7nvbuqijzopa5uq8x`}
                   includeMargin={true}
                   size={300}
                 />
-                <a
-                  href={`http://localhost:3000/?event=kjzl6hvfrbw6c7h89i4guper7x19w3d9vvuulhmq89sg02z9wcfsnt5gvurzdqn`}
-                >
-                  Share
-                </a>
               </div>
             </div>
           </div>
