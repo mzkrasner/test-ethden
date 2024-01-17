@@ -20,7 +20,9 @@ export default async function createCredential(
     if (uniqueKey) {
       const key = fromString(uniqueKey, "base16");
       const provider = new Ed25519Provider(key);
+      const resolved = KeyResolver.getResolver();
       const staticDid = new DID({
+        // @ts-ignore
         resolver: KeyResolver.getResolver(),
         provider,
       });

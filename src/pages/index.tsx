@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Nav from "../components/Navbar";
 import styles from "./index.module.css";
-import Credential from "../components/VC712";
 import Attest from "../components/ind";
 import type { NextPage } from "next";
 import { useEffect, useState } from "react";

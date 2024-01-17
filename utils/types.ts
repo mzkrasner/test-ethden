@@ -80,6 +80,7 @@ export type ResolvedAttestation = Attestation & {
 
 declare global {
   interface Window {
+    // @ts-ignore
     ethereum?: Record<string, unknown>;
   }
 }
